@@ -1,0 +1,19 @@
+<mat-nav-list class="main-color second-color expand">
+    <div class="profile-card ">
+        <img src="../../../../assets/premiere_league.png">
+        <h2>Premiere League</h2>
+    </div>
+
+    <ul fxLayout="row" class="fifity-color">
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/Ligas" >Ligas</a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Paises</a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Times</a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Datas</a>
+    </ul>
+
+    <div *ngFor="let item of ligas">
+        <mat-divider></mat-divider>
+        <img src="../../../../assets/{{item.img}}.png" class="avatar align">
+        <span class="name-space">{{item.name}}</span>
+    </div>
+</mat-nav-list>

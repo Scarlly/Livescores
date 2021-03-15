@@ -1,0 +1,36 @@
+<mat-toolbar class="second-color">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="toggleSideBar()" class="main-color">
+            <mat-icon>play_arrow</mat-icon>
+        </button>
+
+        <span class="main-color"> Livescores </span>
+
+        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end" class="main-color">
+            <ul fxLayout="row" fxLayoutGap="20px">
+                <li>
+                    <button mat-icon-button>
+                        <mat-icon>notifications</mat-icon>
+                    </button>
+                </li>
+                <li>
+                    <h2>Diogo M.</h2>
+                </li>
+                <li>
+                    <button mat-button [matMenuTriggerFor]="menu">
+                         <div class="profile-card-header">
+                            <img src="../../../../assets/avatar.jpg" alt="Avatar" class="avatar">
+                        </div> 
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                            <mat-icon>exit_to_app</mat-icon>
+                            Sign out
+                        </button>
+                    </mat-menu>
+
+                </li>
+            </ul>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
